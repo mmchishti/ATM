@@ -1,9 +1,13 @@
-balance = float(input("Enter your initial balance: "))
 
-x = ("a,b c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z")
-
-if balance == x:
-    print("Enter valid balance value")
+while True:
+  try:
+      balance = float(input("Enter your initial balance: "))
+      if  balance < 0:
+       print("Enter valid balance value")
+      else:  
+       break
+  except ValueError:    
+   print("Invalid input. Please enter a valid number.")
 
 while True:
     print("\n--- Bank Account Menu ---")
